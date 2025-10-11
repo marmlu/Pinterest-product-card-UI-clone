@@ -1,0 +1,68 @@
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.navigation-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  margin-left: 30px;
+}
+.logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.logo-name {
+  color: #e60023;
+  font-weight: 1000;
+}
+.logo-place {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.unity {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-right: 100px;
+}
+.nav {
+  font-weight: bold;
+}
+.service-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+}
+.services {
+  color: rgb(109, 109, 219);
+  font-weight: bold;
+  gap: 20px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 60px;
+  gap: 20px;
+}
+.button {
+  padding: 15px;
+  border-radius: 20px;
+  font-weight: 900;
+  border: none;
+}
+.login {
+  background-color: #e60023;
+
+  color: white;
+}
+.signup {
+  color: black;
+  background-color: rgb(218, 211, 211);
+}
