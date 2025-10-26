@@ -1,5 +1,7 @@
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
+
+  overflow-x: hidden;
 }
 .navigation-bar {
   display: flex;
@@ -188,5 +190,125 @@ body {
   25%,
   100% {
     background-color: lightgray;
+  }
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.ad {
+  position: relative; /* changed to relative so children position properly */
+  width: 100vw;
+  height: auto;
+}
+
+.ad > div {
+  position: absolute; /* stack them in the same place */
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0; /* start hidden */
+  animation: adAnimation 8s infinite;
+}
+
+/* Animation timing */
+.ad > div:nth-child(1) {
+  animation-delay: 0s;
+}
+.ad > div:nth-child(2) {
+  animation-delay: 2s;
+}
+.ad > div:nth-child(3) {
+  animation-delay: 4s;
+}
+.ad > div:nth-child(4) {
+  animation-delay: 6s;
+}
+
+@keyframes adAnimation {
+  0%,
+  20% {
+    opacity: 1;
+  }
+  25%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Common container structure for each section */
+.food,
+.home-decor,
+.outfit,
+.thumb-idea {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  overflow: hidden;
+  gap: 400px; /* your requested 400px gap between left/right */
+  margin-top: 20px;
+}
+
+.left,
+.right,
+.left-2,
+.right-2,
+.left-3,
+.right-3,
+.left-4,
+.right-4 {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  align-items: end;
+}
+
+.left,
+.left-2,
+.left-3,
+.left-4 {
+  justify-content: flex-end; /* images overflow to left side */
+}
+
+.right,
+.right-2,
+.right-3,
+.right-4 {
+  justify-content: flex-start; /* images overflow to right side */
+}
+
+.food img,
+.home-decor img,
+.outfit img,
+.thumb-idea img {
+  width: 195px;
+  object-fit: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  flex: 1;
+}
+.second {
+  height: 200px;
+}
+.third {
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  .dots {
+    margin-top: 150px;
+  }
+  .food {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .food img {
+    height: auto; /* let images resize naturally on mobile */
   }
 }
