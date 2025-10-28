@@ -96,20 +96,20 @@ body {
   opacity: 0;
   font-size: 1.75rem;
   font-weight: bold;
-  animation: slideAnimation 8s infinite;
+  animation: slideAnimation 16s infinite;
 }
 
 .slides span:nth-child(1) {
   animation-delay: 0s;
 }
 .slides span:nth-child(2) {
-  animation-delay: 2s;
-}
-.slides span:nth-child(3) {
   animation-delay: 4s;
 }
+.slides span:nth-child(3) {
+  animation-delay: 8s;
+}
 .slides span:nth-child(4) {
-  animation-delay: 6s;
+  animation-delay: 12s;
 }
 
 @keyframes slideAnimation {
@@ -137,27 +137,27 @@ body {
   border-radius: 50%;
   background-color: lightgray;
   display: inline-block;
-  animation: dotAnimation 8s infinite;
+  animation: dotAnimation 16s infinite;
 }
 
 .dots span:nth-child(1) {
-  animation: dotYellow 8s infinite;
+  animation: dotYellow 16s infinite;
   animation-delay: 0s;
 }
 
 .dots span:nth-child(2) {
-  animation: dotGreen 8s infinite;
-  animation-delay: 2s;
-}
-
-.dots span:nth-child(3) {
-  animation: dotBlue 8s infinite;
+  animation: dotGreen 16s infinite;
   animation-delay: 4s;
 }
 
+.dots span:nth-child(3) {
+  animation: dotBlue 16s infinite;
+  animation-delay: 8s;
+}
+
 .dots span:nth-child(4) {
-  animation: dotGreen 8s infinite;
-  animation-delay: 6s;
+  animation: dotGreen 16s infinite;
+  animation-delay: 12s;
 }
 
 @keyframes dotYellow {
@@ -210,7 +210,7 @@ body {
   top: 0;
   left: 0;
   opacity: 0; /* start hidden */
-  animation: adAnimation 8s infinite;
+  animation: adAnimation 16s infinite;
 }
 
 /* Animation timing */
@@ -218,13 +218,13 @@ body {
   animation-delay: 0s;
 }
 .ad > div:nth-child(2) {
-  animation-delay: 2s;
-}
-.ad > div:nth-child(3) {
   animation-delay: 4s;
 }
+.ad > div:nth-child(3) {
+  animation-delay: 8s;
+}
 .ad > div:nth-child(4) {
-  animation-delay: 6s;
+  animation-delay: 12s;
 }
 
 @keyframes adAnimation {
@@ -249,6 +249,7 @@ body {
   overflow: hidden;
   gap: 400px; /* your requested 400px gap between left/right */
   margin-top: 20px;
+  position: absolute;
 }
 
 .left,
@@ -294,8 +295,8 @@ body {
 .second {
   height: 200px;
 }
-.third {
-  height: 100px;
+.thrid {
+  height: 120px;
 }
 
 @media (max-width: 768px) {
