@@ -247,9 +247,10 @@ body {
   justify-content: center;
   width: 100vw;
   overflow: hidden;
-  gap: 400px; /* your requested 400px gap between left/right */
+  gap: 300px; /* your requested 400px gap between left/right */
   margin-top: 20px;
-  position: absolute;
+  position: relative;
+  transform: translateY(-130px);
 }
 
 .left,
@@ -286,17 +287,20 @@ body {
 .home-decor img,
 .outfit img,
 .thumb-idea img {
-  width: 195px;
+  width: 225px;
+  height: 450px;
   object-fit: cover;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   flex: 1;
 }
-.second {
-  height: 200px;
+img.second {
+  height: 250px !important;
 }
-.thrid {
-  height: 120px;
+
+img.thrid {
+  height: 160px !important;
+  position: relative;
 }
 
 @media (max-width: 768px) {
