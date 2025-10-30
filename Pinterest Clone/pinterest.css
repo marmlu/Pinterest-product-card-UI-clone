@@ -231,10 +231,22 @@ body {
   0%,
   20% {
     opacity: 1;
+    @keyframes adAnimation {
+      0%,
+      20% {
+        opacity: 1;
+      }
+      25%,
+      100% {
+        opacity: 0;
+        transform: translateY(0);
+      }
+    }
   }
   25%,
   100% {
     opacity: 0;
+    transform: translateY(-50px);
   }
 }
 
